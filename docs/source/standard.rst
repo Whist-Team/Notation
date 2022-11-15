@@ -6,7 +6,7 @@ Header
 -------
 All meta data is defined in the Header. This contains information about teams and players.
 
-.. code-block:: none
+.. code-block::
     :caption: Header Example
     [header]
 
