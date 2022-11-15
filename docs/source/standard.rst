@@ -10,7 +10,6 @@ All meta data is defined in the Header. This contains information about teams an
     [header]
     # Unsigned Integer
     number_of_teams = 2
-
     [[players]]
     [[player.player_name_1]]
     # Unsigned Integer: ID of team starting with 0
