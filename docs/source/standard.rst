@@ -1,3 +1,4 @@
+.. _standard:
 Card Game Notation Standard
 ===========================
 This standard uses TOML_ as notation language.

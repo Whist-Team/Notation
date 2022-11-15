@@ -12,7 +12,7 @@ Welcome to Notation's documentation!
 
    autoapi/notation/index.rst
 
-* :ref:`notation`
+* :ref:`standard`
 
 Indices and tables
 ==================
