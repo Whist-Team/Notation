@@ -18,10 +18,10 @@ Furthermore, the location and datetime is stated.
     # Unsigned Integer
     number_of_teams = 2
     [[players]]
-    [[player.player_name_1]]
+    [[players.player_name_1]]
     # Unsigned Integer: ID of team starting with 0
     team = 0
-    [[player.player_name_2]]
+    [[players.player_name_2]]
     team = 1
 
 
