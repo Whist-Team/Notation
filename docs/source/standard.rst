@@ -7,8 +7,8 @@ Header
 All meta data is defined in the Header. This contains information about teams and players.
 
 .. code-block::
+    :caption: Example Header
     [header]
-
     # Unsigned Integer
     number_of_teams = 2
 
