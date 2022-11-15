@@ -12,7 +12,7 @@ Welcome to Notation's documentation!
 
    autoapi/notation/index.rst
 
-* :ref:`standard`
+* :ref:`standard/Card Game Notation Standard`
 
 Indices and tables
 ==================
