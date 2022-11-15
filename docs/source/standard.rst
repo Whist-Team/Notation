@@ -4,11 +4,17 @@ This standard uses TOML_ as notation language.
 
 Header
 -------
-All meta data is defined in the Header. This contains information about teams and players.
+All meta data is defined in the Header.
+This contains information about teams and players.
+Furthermore, the location and datetime is stated.
 
 .. code-block:: toml
 
     [header]
+    # Timestamp of the starting time in RFC 3339
+    timestamp = 2022-08-06T11:22:00
+    # Location of the game or the server url
+    location = "Hamburg"
     # Unsigned Integer
     number_of_teams = 2
     [[players]]
