@@ -30,7 +30,8 @@ release = '0.0.1'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'autoapi.extension'
+    'autoapi.extension',
+    'sphinx.ext.autosectionlabel',
 ]
 
 autoapi_dirs = ['../../notation']
