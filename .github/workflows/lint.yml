@@ -16,7 +16,7 @@ jobs:
           python-version: 3.9
 
       - name: Lint sources with flake8
-        run: poetry run flake8 whist_core --count --show-source --statistics
+        run: poetry run flake8 notation --count --show-source --statistics
 
       - name: Lint sources with pylint
         run: poetry run pylint notation
