@@ -9,11 +9,16 @@ All meta data is defined in the Header. This contains information about teams an
 .. code-block:: toml
     :caption: Header Example
     [header]
+
     # Unsigned Integer
     number_of_teams = 2
-    # List of dictionaries
-    players = [{ name="Player 1", team=0 }, { player="Player 2", team=1 }
 
+    [[players]]
+    [[player.player_name_1]]
+    # Unsigned Integer: ID of team starting with 0
+    team = 0
+    [[player.player_name_2]]
+    team = 1
 
 
 
