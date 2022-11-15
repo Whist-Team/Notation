@@ -31,5 +31,5 @@ jobs:
         uses: tj-actions/bandit@v5
         with:
           targets: |
-            whist_core
+            notation
           options: "-r"
