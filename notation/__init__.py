@@ -1,1 +1,1 @@
-"""Python Source package for notation"""
+"""Python Source package for notation."""
