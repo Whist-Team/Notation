@@ -33,7 +33,7 @@ One card can be represented with
 .. code-block:: toml
 
     [data]
-    stack = [♦2]
+    stack = ["♦2","♦3","♦K"]
 
 
 .. _TOML: https://toml.io/en/
