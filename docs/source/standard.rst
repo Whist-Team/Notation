@@ -26,7 +26,7 @@ Furthermore, the location and datetime is stated.
 
 Stack
 -----
-The data contains one field ``stack`` that is a list of cards.
+The data contains one field ``stack`` that is a list of strings representing a card.
 One card can be represented with
 ``"[♦♣♥♠][2-10JQKA]"``.
 
