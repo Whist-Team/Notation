@@ -29,6 +29,7 @@ Stack
 The data contains one mandatory field ``stack`` that is a list of strings representing a card.
 Furthermore it has an optional field ``hands`` that is a table of the players' cards in hand.
 One card can be represented with
+
 .. code-block:: toml
 
     suit = "[♦♣♥♠]"
