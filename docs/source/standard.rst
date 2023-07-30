@@ -29,15 +29,18 @@ Stack
 The data contains one mandatory field ``stack`` that is a list of strings representing a card.
 Furthermore it has an optional field ``hands`` that is a table of the players' cards in hand.
 One card can be represented with
-``"[♦♣♥♠][2-10JQKA]"``.
+.. code-block:: toml
+
+    suit = "[♦♣♥♠]"
+    rank = "[2-10JQKA]"
 
 .. code-block:: toml
 
     [data]
-    stack = ["♦2","♦3","♦K"]
+    stack = [{suit = "♦", rank = "2"}, {suit= "♦" rank = "3"}]
     [hands]
     [hands.player-1]
-    hand = ["♥4","♥6","♦A"]
+    hand = [{suit = "♥", rank = "8"}, {suit= "♥" rank = "A"}]
 
 
 .. _TOML: https://toml.io/en/
