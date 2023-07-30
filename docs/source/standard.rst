@@ -24,6 +24,16 @@ Furthermore, the location and datetime is stated.
     [[players.player_name_2]]
     team = 1
 
+Stack
+-----
+The data contains one field ``stack`` that is a list of cards.
+One card can be represented with
+``"[♦♣♥♠][2-10JQKA]"``.
+
+.. code-block:: toml
+
+    [data]
+    stack = [♦2]
 
 
 .. _TOML: https://toml.io/en/
