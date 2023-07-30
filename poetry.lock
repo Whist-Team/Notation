@@ -4,6 +4,7 @@
 name = "astroid"
 version = "2.15.6"
 description = "An abstract syntax tree for Python with inference support."
+category = "dev"
 optional = false
 python-versions = ">=3.7.2"
 files = [
@@ -20,53 +21,10 @@ wrapt = [
 ]
 
 [[package]]
-name = "attrs"
-version = "22.1.0"
-description = "Classes Without Boilerplate"
-category = "dev"
-optional = false
-python-versions = ">=3.5"
-
-[package.extras]
-dev = ["cloudpickle", "coverage[toml] (>=5.0.2)", "furo", "hypothesis", "mypy (>=0.900,!=0.940)", "pre-commit", "pympler", "pytest (>=4.3.0)", "pytest-mypy-plugins", "sphinx", "sphinx-notfound-page", "zope.interface"]
-docs = ["furo", "sphinx", "sphinx-notfound-page", "zope.interface"]
-tests = ["cloudpickle", "coverage[toml] (>=5.0.2)", "hypothesis", "mypy (>=0.900,!=0.940)", "pympler", "pytest (>=4.3.0)", "pytest-mypy-plugins", "zope.interface"]
-tests_no_zope = ["cloudpickle", "coverage[toml] (>=5.0.2)", "hypothesis", "mypy (>=0.900,!=0.940)", "pympler", "pytest (>=4.3.0)", "pytest-mypy-plugins"]
-
-[[package]]
-name = "babel"
-version = "2.11.0"
-description = "Internationalization utilities"
-category = "dev"
-optional = false
-python-versions = ">=3.6"
-
-[package.dependencies]
-pytz = ">=2015.7"
-
-[[package]]
-name = "certifi"
-version = "2022.9.24"
-description = "Python package for providing Mozilla's CA Bundle."
-category = "dev"
-optional = false
-python-versions = ">=3.6"
-
-[[package]]
-name = "charset-normalizer"
-version = "2.1.1"
-description = "The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet."
-category = "dev"
-optional = false
-python-versions = ">=3.6.0"
-
-[package.extras]
-unicode_backport = ["unicodedata2"]
-
-[[package]]
 name = "colorama"
 version = "0.4.6"
 description = "Cross-platform colored terminal text."
+category = "dev"
 optional = false
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,!=3.6.*,>=2.7"
 files = [
@@ -78,6 +36,7 @@ files = [
 name = "coverage"
 version = "7.2.7"
 description = "Code coverage measurement for Python"
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 files = [
@@ -153,6 +112,7 @@ toml = ["tomli"]
 name = "dill"
 version = "0.3.7"
 description = "serialize all of Python"
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 files = [
@@ -167,6 +127,7 @@ graph = ["objgraph (>=1.7.2)"]
 name = "exceptiongroup"
 version = "1.1.2"
 description = "Backport of PEP 654 (exception groups)"
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 files = [
@@ -181,6 +142,7 @@ test = ["pytest (>=6)"]
 name = "flake8"
 version = "5.0.4"
 description = "the modular source code checker: pep8 pyflakes and co"
+category = "main"
 optional = false
 python-versions = ">=3.6.1"
 files = [
@@ -197,6 +159,7 @@ pyflakes = ">=2.5.0,<2.6.0"
 name = "flake8-docstrings"
 version = "1.7.0"
 description = "Extension for flake8 which uses pydocstyle to check docstrings"
+category = "main"
 optional = false
 python-versions = ">=3.7"
 files = [
@@ -224,6 +187,7 @@ files = [
 name = "isort"
 version = "5.12.0"
 description = "A Python utility / library to sort Python imports."
+category = "dev"
 optional = false
 python-versions = ">=3.8.0"
 files = [
@@ -232,8 +196,8 @@ files = [
 ]
 
 [package.extras]
-colors = ["colorama (>=0.4.3,<0.5.0)"]
-pipfile-deprecated-finder = ["pipreqs", "requirementslib"]
+colors = ["colorama (>=0.4.3)"]
+pipfile-deprecated-finder = ["pip-shims (>=0.5.2)", "pipreqs", "requirementslib"]
 plugins = ["setuptools"]
 requirements-deprecated-finder = ["pip-api", "pipreqs"]
 
@@ -241,6 +205,7 @@ requirements-deprecated-finder = ["pip-api", "pipreqs"]
 name = "lazy-object-proxy"
 version = "1.9.0"
 description = "A fast and thorough lazy object proxy."
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 files = [
@@ -286,6 +251,7 @@ files = [
 name = "mccabe"
 version = "0.7.0"
 description = "McCabe checker, plugin for flake8"
+category = "main"
 optional = false
 python-versions = ">=3.6"
 files = [
@@ -297,6 +263,7 @@ files = [
 name = "packaging"
 version = "23.1"
 description = "Core utilities for Python packages"
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 files = [
@@ -308,6 +275,7 @@ files = [
 name = "platformdirs"
 version = "3.10.0"
 description = "A small Python package for determining appropriate platform-specific dirs, e.g. a \"user data dir\"."
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 files = [
@@ -323,6 +291,7 @@ test = ["appdirs (==1.4.4)", "covdefaults (>=2.3)", "pytest (>=7.4)", "pytest-co
 name = "pluggy"
 version = "1.2.0"
 description = "plugin and hook calling mechanisms for python"
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 files = [
@@ -338,6 +307,7 @@ testing = ["pytest", "pytest-benchmark"]
 name = "pycodestyle"
 version = "2.9.1"
 description = "Python style guide checker"
+category = "main"
 optional = false
 python-versions = ">=3.6"
 files = [
@@ -349,6 +319,7 @@ files = [
 name = "pydocstyle"
 version = "6.3.0"
 description = "Python docstring style checker"
+category = "main"
 optional = false
 python-versions = ">=3.6"
 files = [
@@ -366,6 +337,7 @@ toml = ["tomli (>=1.2.3)"]
 name = "pyflakes"
 version = "2.5.0"
 description = "passive checker of Python programs"
+category = "main"
 optional = false
 python-versions = ">=3.6"
 files = [
@@ -377,6 +349,7 @@ files = [
 name = "pylint"
 version = "2.17.5"
 description = "python code static checker"
+category = "dev"
 optional = false
 python-versions = ">=3.7.2"
 files = [
@@ -406,6 +379,7 @@ testutils = ["gitpython (>3)"]
 name = "pytest"
 version = "7.4.0"
 description = "pytest: simple powerful testing with Python"
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 files = [
@@ -428,6 +402,7 @@ testing = ["argcomplete", "attrs (>=19.2.0)", "hypothesis (>=3.56)", "mock", "no
 name = "pytest-asyncio"
 version = "0.21.1"
 description = "Pytest support for asyncio"
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 files = [
@@ -446,6 +421,7 @@ testing = ["coverage (>=6.2)", "flaky (>=3.5.0)", "hypothesis (>=5.7.1)", "mypy 
 name = "pytest-cov"
 version = "4.1.0"
 description = "Pytest plugin for measuring coverage."
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 files = [
@@ -464,6 +440,7 @@ testing = ["fields", "hunter", "process-tests", "pytest-xdist", "six", "virtuale
 name = "snowballstemmer"
 version = "2.2.0"
 description = "This package provides 29 stemmers for 28 languages generated from Snowball algorithms."
+category = "main"
 optional = false
 python-versions = "*"
 files = [
@@ -475,6 +452,7 @@ files = [
 name = "tomli"
 version = "2.0.1"
 description = "A lil' TOML parser"
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 files = [
@@ -486,6 +464,7 @@ files = [
 name = "tomlkit"
 version = "0.12.1"
 description = "Style preserving TOML library"
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 files = [
@@ -497,6 +476,7 @@ files = [
 name = "typing-extensions"
 version = "4.7.1"
 description = "Backported and Experimental Type Hints for Python 3.7+"
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 files = [
@@ -508,6 +488,7 @@ files = [
 name = "wrapt"
 version = "1.15.0"
 description = "Module for decorators, wrappers and monkey patching."
+category = "dev"
 optional = false
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7"
 files = [
@@ -591,4 +572,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "5ac43f895be7f17e6d66de025d97df5ecf459c89f19392407ea72da4e5d9a8ca"
+content-hash = "b5aa849847f706e20088b950383795272dae6e675203907a94b8a129049632e7"
