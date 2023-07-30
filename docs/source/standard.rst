@@ -26,7 +26,8 @@ Furthermore, the location and datetime is stated.
 
 Stack
 -----
-The data contains one field ``stack`` that is a list of strings representing a card.
+The data contains one mandatory field ``stack`` that is a list of strings representing a card.
+Furthermore it has an optional field ``hands`` that is a table of the players' cards in hand.
 One card can be represented with
 ``"[♦♣♥♠][2-10JQKA]"``.
 
@@ -34,6 +35,9 @@ One card can be represented with
 
     [data]
     stack = ["♦2","♦3","♦K"]
+    [hands]
+    [hands.player-1]
+    hand = ["♥4","♥6","♦A"]
 
 
 .. _TOML: https://toml.io/en/
