@@ -5,9 +5,9 @@ class Card:
     def __init__(self, suit: str, rank: str):
         self._suit: str = self._valid_suit(suit)
         self._rank: str = self._valid_rank(rank)
-    
+
     @staticmethod
-    def _valid_suit(suit: str)->str:
+    def _valid_suit(suit: str) -> str:
         if not isinstance(suit, str):
             raise ValueError('Suit must be string.')
         if not suit:
