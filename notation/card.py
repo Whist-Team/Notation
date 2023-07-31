@@ -27,9 +27,6 @@ class Card:
 
 
 class FrenchCard(Card):
-    def __init__(self, suit: str, rank: str):
-        super().__init__(self._valid_suit(suit), self._valid_rank(rank))
-
     @staticmethod
     def _valid_suit(suit: str) -> str:
         if suit not in ('♦', '♣', '♥', '♠'):
