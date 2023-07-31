@@ -50,7 +50,7 @@ def test_init_french_invalid_suit(suit):
                                             blacklist_characters=(
                                                     '"', "'", 'A', '2', '3', '4', '5', '6', '7',
                                                     '8', '9', 'J', 'Q', 'K'))))
-def test_init_french_invalid_suit(rank):
+def test_init_french_invalid_rank(rank):
     with pytest.raises(ValueError):
         _ = FrenchCard('♦', rank)
 
