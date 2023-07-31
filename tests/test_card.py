@@ -40,14 +40,19 @@ rank = "{rank}"
 
 
 @given(text(min_size=1, alphabet=characters(whitelist_categories=('L', 'N', 'S'),
-                                            blacklist_characters=('"', "'", '♦', '♣', '♥', '♠'))),
-       text(min_size=1, alphabet=characters(whitelist_categories=('L', 'N', 'S'),
-                                            blacklist_characters=(
-                                            '"', "'", 'A', '2', '3', '4', '5', '6', '7',
-                                            '8', '9', 'J', 'Q', 'K'))))
-def test_init_french_invalid(suit, rank):
+                                            blacklist_characters=('"', "'", '♦', '♣', '♥', '♠'))))
+def test_init_french_invalid_suit(suit):
     with pytest.raises(ValueError):
-        _ = FrenchCard(suit, rank)
+        _ = FrenchCard(suit, 'A')
+
+
+@given(text(min_size=1, alphabet=characters(whitelist_categories=('L', 'N', 'S'),
+                                            blacklist_characters=(
+                                                    '"', "'", 'A', '2', '3', '4', '5', '6', '7',
+                                                    '8', '9', 'J', 'Q', 'K'))))
+def test_init_french_invalid_suit(rank):
+    with pytest.raises(ValueError):
+        _ = FrenchCard('♦', rank)
 
 
 @pytest.mark.parametrize("suit", ['♦', '♣', '♥', '♠'])
