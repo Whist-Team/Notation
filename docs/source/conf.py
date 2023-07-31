@@ -30,11 +30,12 @@ release = '0.0.1'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'autoapi.extension'
+    'autoapi.extension',
+    'sphinx.ext.autosectionlabel',
 ]
 
 autoapi_dirs = ['../../notation']
-
+autosectionlabel_prefix_document = True
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 

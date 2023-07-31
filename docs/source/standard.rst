@@ -1,0 +1,47 @@
+Card Game Notation Standard
+===========================
+This standard uses TOML_ as notation language.
+
+Header
+-------
+All meta data is defined in the Header.
+This contains information about teams and players.
+Furthermore, the location and datetime is stated.
+
+.. code-block:: toml
+
+    [header]
+    # Timestamp of the starting time in RFC 3339
+    timestamp = 2022-08-06T11:22:00
+    # Location of the game or the server url
+    location = "Hamburg"
+    # Unsigned Integer
+    number_of_teams = 2
+    [[players]]
+    [[players.player_name_1]]
+    # Unsigned Integer: ID of team starting with 0
+    team = 0
+    [[players.player_name_2]]
+    team = 1
+
+Stack
+-----
+The data contains one mandatory field ``stack`` that is a list of strings representing a card.
+Furthermore it has an optional field ``hands`` that is a table of the players' cards in hand.
+One card can be represented with
+
+.. code-block:: toml
+
+    suit = "[♦♣♥♠]"
+    rank = "[2-10JQKA]"
+
+.. code-block:: toml
+
+    [data]
+    stack = [{suit = "♦", rank = "2"}, {suit= "♦" rank = "3"}]
+    [hands]
+    [hands.player-1]
+    hand = [{suit = "♥", rank = "8"}, {suit= "♥" rank = "A"}]
+
+
+.. _TOML: https://toml.io/en/
