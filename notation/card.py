@@ -1,7 +1,11 @@
+"""Python implementation of a general card and specific versions."""
 import tomlkit
 
 
 class Card:
+    """
+    General representation of a card.
+    """
     def __init__(self, suit: str, rank: str):
         self._suit: str = self._valid_suit(suit)
         self._rank: str = self._valid_rank(rank)
@@ -24,17 +28,21 @@ class Card:
 
     @property
     def suit(self) -> str:
+        """Returns the suit of a card as string."""
         return self._suit
 
     @property
     def rank(self) -> str:
+        """Returns the rank of a card as string."""
         return self._rank
 
     def dumps(self) -> str:
+        """Returns the card as TOML string."""
         return tomlkit.dumps({'suit': self._suit, 'rank': self._rank})
 
 
 class FrenchCard(Card):
+    """Represents a French card."""
     @staticmethod
     def _valid_suit(suit: str) -> str:
         if suit not in ('♦', '♣', '♥', '♠'):
