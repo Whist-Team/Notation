@@ -17,7 +17,6 @@ Furthermore, the location and datetime is stated.
     location = "Hamburg"
     # Unsigned Integer
     number_of_teams = 2
-    [[players]]
     [[players.player_name_1]]
     # Unsigned Integer: ID of team starting with 0
     team = 0
@@ -37,11 +36,18 @@ One card can be represented with
 
 .. code-block:: toml
 
-    [data]
-    stack = [{suit = "♦", rank = "2"}, {suit= "♦" rank = "3"}]
-    [hands]
-    [hands.player-1]
-    hand = [{suit = "♥", rank = "8"}, {suit= "♥" rank = "A"}]
+
+    [[stack.card]]
+    suit="heart"
+    rank="A"
+    [[data.stack.card]]
+    suit="heart"
+    rank="K"
+
+    [[hands.player_1]]
+    [[hands.player_1.card]]
+    suit="heart"
+    rank="2"
 
 
 .. _TOML: https://toml.io/en/
