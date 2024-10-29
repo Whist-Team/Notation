@@ -22,6 +22,14 @@ class Card:
             raise ValueError('Rank must not be empty.')
         return rank
 
+    @property
+    def suit(self) -> str:
+        return self._suit
+
+    @property
+    def rank(self) -> str:
+        return self._rank
+
     def dumps(self) -> str:
         return tomli_w.dumps({'suit': self._suit, 'rank': self._rank})
 
