@@ -1,4 +1,4 @@
-import tomli_w
+import tomlkit
 
 
 class Card:
@@ -31,7 +31,7 @@ class Card:
         return self._rank
 
     def dumps(self) -> str:
-        return tomli_w.dumps({'suit': self._suit, 'rank': self._rank})
+        return tomlkit.dumps({'suit': self._suit, 'rank': self._rank})
 
 
 class FrenchCard(Card):

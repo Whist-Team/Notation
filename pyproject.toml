@@ -19,7 +19,6 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.10"
-tomli-w = "^1.0.0"
 tomlkit = "^0.13.2"
 
 [tool.poetry.group.dev.dependencies]
