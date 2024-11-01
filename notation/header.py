@@ -11,6 +11,10 @@ class Header:
                  number_teams: int, location: Optional[str] = None, ):
         self._start_time: datetime = start_time
         self._location = location
+        if players is None or len(players) == 0:
+            raise ValueError('Player list cannot be empty')
+        if number_teams > len(players):
+            raise ValueError('Number teams cannot be greater than amount of players')
         self._players = players
         self._number_teams = number_teams
 

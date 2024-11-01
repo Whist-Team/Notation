@@ -1,5 +1,6 @@
 from datetime import datetime
 
+import pytest
 import tomlkit
 from hypothesis import assume, example, given
 from hypothesis.strategies import datetimes, lists, integers
@@ -22,3 +23,13 @@ def test_dumps(start_time: datetime, players, number_teams):
     expected_toml += "\n".join(player_string) + '\n'
     assume(tomlkit.loads(expected_toml))
     assert header_dump == expected_toml
+
+
+def test_empty_player_list():
+    with pytest.raises(ValueError):
+        Header(start_time=datetime.now(), players=[], number_teams=1)
+
+
+def test_more_teams_than_players():
+    with pytest.raises(ValueError):
+        Header(start_time=datetime.now(), players=[Player(name='John', team=1)], number_teams=2)
