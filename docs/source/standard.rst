@@ -17,11 +17,13 @@ Furthermore, the location and datetime is stated.
     location = "Hamburg"
     # Unsigned Integer
     number_of_teams = 2
-    [[players.player_name_1]]
+    [[players.seat_1]]
     # Unsigned Integer: ID of team starting with 0
     team = 0
-    [[players.player_name_2]]
+    name = "John"
+    [[players.seat_2]]
     team = 1
+    Name = "Lucy"
 
 Stack
 -----
