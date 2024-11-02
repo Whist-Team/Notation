@@ -21,7 +21,7 @@ Furthermore, the location and datetime is stated.
     # Unsigned Integer: ID of team starting with 0
     team = 0
     name = "John"
-    [[players.seat_2]]
+    [[players]]
     team = 1
     Name = "Lucy"
 
