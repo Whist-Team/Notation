@@ -1,6 +1,6 @@
 """Header containing the meta data of a game."""
 from datetime import datetime
-from typing import List, Optional
+from typing import Optional
 
 import tomlkit
 
@@ -30,10 +30,9 @@ class Header:
 
     def dumps(self) -> str:
         """Return a TOML string representation of the header."""
-        players = {f'seat_{index}': [player.dict()] for index, player in enumerate(self._players)}
+        players = [tomlkit.dumps({'players': [player.dict()]}) for player in self._players]
         header_dump = {'header': {'timestamp': self._start_time.isoformat(),
-                                  'number_of_teams': self._number_teams},
-                       'players': players}
+                                  'number_of_teams': self._number_teams}}
         if self._location:
             header_dump['header']['location'] = self._location
-        return tomlkit.dumps(header_dump)
+        return f'{tomlkit.dumps(header_dump)}\n{"\n".join(players)}'
