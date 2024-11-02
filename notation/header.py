@@ -24,4 +24,6 @@ class Header:
         header_dump = {'header': {'timestamp': self._start_time.isoformat(),
                                   'number_of_teams': self._number_teams},
                        'players': players}
+        if self._location:
+            header_dump['header']['location'] = self._location
         return tomlkit.dumps(header_dump)
