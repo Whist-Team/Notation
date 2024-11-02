@@ -35,4 +35,5 @@ class Header:
                                   'number_of_teams': self._number_teams}}
         if self._location:
             header_dump['header']['location'] = self._location
-        return f'{tomlkit.dumps(header_dump)}\n{"\n".join(players)}'
+        player_string = '\n'.join(players)
+        return f'{tomlkit.dumps(header_dump)}\n{player_string}'
