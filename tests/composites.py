@@ -20,8 +20,14 @@ def build_card(draw):
 
 
 @composite
-def build_player(draw):
+def build_player(draw, seat: int):
     """Build a player with random strings of at least size one for the name."""
     name = draw(text(alphabet=string.ascii_letters, min_size=1))
     team = draw(integers())
-    return Player(name, team)
+    return Player(name, team, seat)
+
+
+@composite
+def build_player_list(draw):
+    amount_players = draw(integers(min_value=1, max_value=10))
+    return [build_player(seat=seat) for seat in range(amount_players)]
