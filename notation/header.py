@@ -11,7 +11,7 @@ from notation.player import Player
 class Header:
     """Class implementation of a meta data wrapper."""
 
-    def __init__(self, start_time: datetime, players: List[Player],
+    def __init__(self, start_time: datetime, players: list[Player],
                  number_teams: int, location: Optional[str] = None, ):
         """Constructor.
         :param start_time: The start time of the game as datetime object
