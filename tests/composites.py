@@ -1,3 +1,5 @@
+import string
+
 from hypothesis.strategies import composite, text, characters, integers
 
 from notation.card import Card
@@ -17,6 +19,6 @@ def build_card(draw):
 
 @composite
 def build_player(draw):
-    name = draw(text(alphabet=characters()))
+    name = draw(text(alphabet=string.ascii_letters, min_size=1))
     team = draw(integers())
     return Player(name, team)
