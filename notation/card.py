@@ -47,7 +47,10 @@ class Card:
 
     def dumps(self) -> str:
         """Return the card as TOML string."""
-        return tomlkit.dumps({'suit': self._suit, 'rank': self._rank})
+        return tomlkit.dumps(self.dict())
+
+    def dict(self):
+        return {'suit': self._suit, 'rank': self._rank}
 
 
 class FrenchCard(Card):
