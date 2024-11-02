@@ -20,8 +20,7 @@ class Header:
 
     def dumps(self) -> str:
         players = {f'seat_{index}':
-                       [{'name': player._name,
-                         'team': player._team}] for index, player in enumerate(self._players)}
+                       [player.dict()] for index, player in enumerate(self._players)}
         header_dump = {'header': {'timestamp': self._start_time.isoformat(),
                                   'number_of_teams': self._number_teams},
                        'players': players}
