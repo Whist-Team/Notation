@@ -42,7 +42,7 @@ One card can be represented with
     [[stack.card]]
     suit="heart"
     rank="A"
-    [[data.stack.card]]
+    [[stack.card]]
     suit="heart"
     rank="K"
 
