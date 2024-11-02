@@ -39,10 +39,10 @@ One card can be represented with
 .. code-block:: toml
 
 
-    [[stack.card]]
+    [[stack]]
     suit="heart"
     rank="A"
-    [[stack.card]]
+    [[stack]]
     suit="heart"
     rank="K"
 

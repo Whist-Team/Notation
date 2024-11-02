@@ -20,5 +20,5 @@ class Stack:
 
     def dumps(self) -> str:
         """Return the stack as TOML string."""
-        card_dump = {'cards': [card.dict() for card in self._card_list]}
+        card_dump = [card.dict() for card in self._card_list]
         return tomlkit.dumps({'stack': card_dump})

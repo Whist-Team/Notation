@@ -13,7 +13,7 @@ from tests.composites import build_card
 def test_dumps(cards):
     stack = Stack(cards=cards)
     toml_stack: str = stack.dumps()
-    stack = (f'[[stack.cards]]\nsuit = "{card.suit}"\nrank = "{card.rank}"\n' for card in cards)
+    stack = (f'[[stack]]\nsuit = "{card.suit}"\nrank = "{card.rank}"\n' for card in cards)
     expected_toml = "\n".join(stack)
     assume(tomlkit.loads(expected_toml))
     assert toml_stack == expected_toml
