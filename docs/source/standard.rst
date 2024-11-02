@@ -17,7 +17,7 @@ Furthermore, the location and datetime is stated.
     location = "Hamburg"
     # Unsigned Integer
     number_of_teams = 2
-    [[players.seat_1]]
+    [[players]]
     # Unsigned Integer: ID of team starting with 0
     team = 0
     name = "John"
