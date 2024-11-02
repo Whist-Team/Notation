@@ -50,6 +50,7 @@ class Card:
         return tomlkit.dumps(self.dict())
 
     def dict(self):
+        """Return the card as dictionary."""
         return {'suit': self._suit, 'rank': self._rank}
 
 

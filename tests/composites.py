@@ -1,3 +1,4 @@
+"""Build funtions for hypothesis tests."""
 import string
 
 from hypothesis.strategies import composite, text, characters, integers
@@ -8,6 +9,7 @@ from notation.player import Player
 
 @composite
 def build_card(draw):
+    """Build a card with random strings of size one for suit and rank."""
     suit: str = draw(text(min_size=1, max_size=1,
                           alphabet=characters(whitelist_categories=('L', 'N', 'S'),
                                               blacklist_characters=('"', "'"))))
@@ -19,6 +21,7 @@ def build_card(draw):
 
 @composite
 def build_player(draw):
+    """Build a player with random strings of at least size one for the name."""
     name = draw(text(alphabet=string.ascii_letters, min_size=1))
     team = draw(integers())
     return Player(name, team)
