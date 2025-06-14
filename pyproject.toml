@@ -22,7 +22,7 @@ python = "^3.10"
 
 [tool.poetry.dev-dependencies]
 pytest = "^8.4"
-pytest-asyncio = "^1.0.0" # .5 because that version is the first to have compat with pytest 8
+pytest-asyncio = "^1.0"
 flake8 = "^7.2"
 flake8-docstrings = "^1.7"
 pylint = "^3.3"
