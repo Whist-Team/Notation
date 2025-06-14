@@ -1,32 +1,33 @@
-[tool.poetry]
+[project]
 name = "notation"
 # remember to also update the version in __init__.py!
 version = "0.0.1"
 description = "Provides a standard for card game notation"
-authors = ["Whist-Team"]
+authors = [{ name = "Whist-Team" }]
 license = "MIT"
 readme = "README.md"
-homepage = "https://github.com/Whist-Team/Notation"
-repository = "https://github.com/Whist-Team/Notation"
-documentation = "https://card-notation.readthedocs.io"
 keywords = ["game", "card", "notation"]
 classifiers = [
     "Operating System :: OS Independent"
 ]
+requires-python = ">=3.10"
 
-[tool.poetry.urls]
-"Bug Tracker" = "https://github.com/Whist-Team/Notation/issues"
+[project.urls]
+homepage = "https://github.com/Whist-Team/Notation"
+source = "https://github.com/Whist-Team/Notation"
+documentation = "https://card-notation.readthedocs.io"
+issues = "https://github.com/Whist-Team/Notation/issues"
 
-[tool.poetry.dependencies]
-python = "^3.10"
+[tool.poetry]
+requires-poetry = ">=2.0"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 pytest = "^8.4"
-pytest-asyncio = "^0.26.0" # .5 because that version is the first to have compat with pytest 8
+pytest-asyncio = "^1.0"
 flake8 = "^7.2"
 flake8-docstrings = "^1.7"
 pylint = "^3.3"
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
