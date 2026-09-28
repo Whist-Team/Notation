@@ -24,7 +24,7 @@ requires-poetry = ">=2.0"
 [tool.poetry.group.dev.dependencies]
 pytest = "^9.1"
 pytest-asyncio = "^1.4"
-flake8 = "^7.3"
+flake8 = "^7.4"
 flake8-docstrings = "^1.7"
 pylint = "^4.0"
 
