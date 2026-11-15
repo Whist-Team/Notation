@@ -21,6 +21,11 @@ issues = "https://github.com/Whist-Team/Notation/issues"
 [tool.poetry]
 requires-poetry = ">=2.0"
 
+[tool.poetry.dependencies]
+python = "^3.13"
+flake8 = "==7.5.0"
+
+
 [tool.poetry.group.dev.dependencies]
 pytest = "^9.2"
 pytest-asyncio = "^1.4"
