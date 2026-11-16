@@ -10,7 +10,7 @@ keywords = ["game", "card", "notation"]
 classifiers = [
     "Operating System :: OS Independent"
 ]
-requires-python = ">=3.10"
+requires-python = ">=3.13"
 
 [project.urls]
 homepage = "https://github.com/Whist-Team/Notation"
