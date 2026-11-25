@@ -20,7 +20,9 @@ issues = "https://github.com/Whist-Team/Notation/issues"
 
 [tool.poetry]
 requires-poetry = ">=2.0"
-tomlkit = "^0.13.2"
+
+[tool.poetry.dependencies]
+tomlkit = "^0.15"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^9.2"
